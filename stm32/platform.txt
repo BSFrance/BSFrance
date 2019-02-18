@@ -15,7 +15,7 @@ compiler.warning_flags.all=-Wall -Wextra
 #compiler.path={runtime.tools.arm-none-eabi-gcc.path}/bin/
 compiler.path.windows={runtime.hardware.path}/stm32/tools/win/gcc/bin/
 compiler.path.macosx={runtime.hardware.path}/stm32/tools/macosx/gcc/bin/
-
+compiler.path.linux64=/usr/bin/
 
 compiler.S.cmd=arm-none-eabi-gcc
 compiler.c.cmd=arm-none-eabi-gcc
@@ -128,6 +128,8 @@ tools.dfu-util.cmd=dfu-util
 tools.dfu-util.cmd.windows=dfu-util-static
 tools.dfu-util.path.macosx={runtime.hardware.path}/stm32/tools/macosx/dfu-util
 tools.dfu-util.path.windows={runtime.hardware.path}/stm32/tools/win/
+tools.dfu-util.path.linux64={runtime.hardware.path}/stm32/tools/linux64/dfu-util
+tools.dfu-util.path.linux={runtime.hardware.path}/stm32/tools/linux64/dfu-util
 tools.dfu-util.upload.params.verbose=-v
 tools.dfu-util.upload.params.quiet=n
 #tools.dfu-util.upload.pattern="{path}/{cmd}" "{path}" {upload.usbID} {upload.altID} {upload.mem_start} "{build.path}/{build.project_name}.bin"
@@ -138,6 +140,8 @@ tools.dfu-utilc.cmd=dfu-util
 tools.dfu-utilc.cmd.windows=dfu-util-static
 tools.dfu-utilc.path.macosx={runtime.hardware.path}/stm32/tools/macosx/dfu-util
 tools.dfu-utilc.path.windows={runtime.hardware.path}/stm32/tools/win/
+tools.dfu-utilc.path.linux64={runtime.hardware.path}/stm32/tools/linux64/dfu-util
+tools.dfu-utilc.path.linux={runtime.hardware.path}/stm32/tools/linux/dfu-util
 tools.dfu-utilc.upload.params.verbose=-v
 tools.dfu-utilc.upload.params.quiet=n
 #tools.dfu-utilc.upload.pattern="{path}/{cmd}" "{path}" {upload.usbID} {upload.altID} {upload.mem_start} "{build.path}/{build.project_name}.bin"

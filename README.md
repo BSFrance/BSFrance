@@ -19,6 +19,26 @@ You can now proceed with the Arduino core installation :
 
   *Note : Documents / Arduino is the default location of user fodlder set by Arduino IDE, if you use another location the principle is the same. If no Hardware folder is present in Documents / Arduino, create it, and move the BSFrance-stm32 repository inside. You might want to rename the unzipped directory BSFRance-stm32.*
 
+### Cross compiler
+
+You have to install the gcc-arm-none-eabi cross compiler for your OS.
+
+ - Linux:
+
+    apt-get install gcc-arm-none-eabi libnewlib-arm-none-eabi
+
+ - Windows:
+
+https://github.com/BSFrance/BSFrance-stm32/issues/1
+
+> I copied the contents of gcc-arm-none-eabi-7-2017-q4-major-win32.zip from https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads to here: \hardware\BSFrance-stm32-master\stm32\tools\win\gcc
+
+> Next was about the dfu-util-static which was missing:
+> Downloaded it: http://dfu-util.sourceforge.net/ and put the dfu-util-static.exe here: \hardware\BSFrance-stm32-master\stm32\tools\win
+
+ - Mac:
+> For Mac, I also had to replace the whole gcc folder with the content gcc-arm-none-eabi-7-2017-q4-major-mac.tar.bz2 and install the dfu-utils with brew : brew install libusb and then brew install dfu-util
+
 ### USB serial port
 
 The LoRaMx boards are providing a serial port via the native USB interface, this serial port can be used for debug or communication purpose, it is also used by Arduino to provide automatic upload.
